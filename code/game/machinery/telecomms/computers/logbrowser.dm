@@ -99,7 +99,6 @@
 	
 /obj/machinery/computer/telecomms/server/ui_data(mob/user)
 	var/list/data = list()
-	data["authenticated"] = authenticated
 	data["screen_state"] = screen_state
 	data["network"] = network
 	if(screen_state == MONITOR_MAINMENU)
