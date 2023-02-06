@@ -3,7 +3,7 @@ GLOBAL_VAR_INIT(ai_control_code, random_nukecode(6))
 /obj/machinery/computer/ai_control_console
 	name = "\improper AI control console"
 	desc = "Used for accessing the central AI repository from which AIs can be downloaded or uploaded."
-	req_access = list(ACCESS_RD)
+	req_one_access = list(ACCESS_RD, ACCESS_NETWORK)
 	icon_keyboard = "tech_key"
 	icon_screen = "ai-fixer"
 	light_color = LIGHT_COLOR_PINK

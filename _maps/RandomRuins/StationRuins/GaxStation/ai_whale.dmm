@@ -312,7 +312,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	id_tag = "ai_core_airlock_exterior";
 	name = "AI Core";
-	req_access_txt = "16"
+	req_access_txt = "65"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -388,7 +388,8 @@
 /obj/machinery/turretid{
 	icon_state = "control_stun";
 	name = "AI Chamber turret control";
-	pixel_y = 32
+	pixel_y = 32;
+	req_access = list(65)
 	},
 /obj/machinery/camera{
 	c_tag = "AI Chamber - Fore";
@@ -1398,13 +1399,15 @@
 	idInterior = "ai_core_airlock_interior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = 25;
-	pixel_y = 7
+	pixel_y = 7;
+	req_access_txt = "65"
 	},
 /obj/machinery/doorButtons/access_button{
-	idDoor = "ai_core_airlock_interior";
+	idDoor = "ai_core_airlock_exterior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = 23;
-	pixel_y = -7
+	pixel_y = -7;
+	req_access_txt = "65"
 	},
 /obj/machinery/camera{
 	c_tag = "MiniSat  Antechamber";
@@ -1976,7 +1979,8 @@
 	idDoor = "ai_core_airlock_exterior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = -23;
-	pixel_y = 7
+	pixel_y = 7;
+	req_access_txt = "65"
 	},
 /obj/machinery/light,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
@@ -2324,7 +2328,8 @@
 	idDoor = "ai_core_airlock_interior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = -23;
-	pixel_y = 7
+	pixel_y = 7;
+	req_access_txt = "65"
 	},
 /turf/open/floor/circuit/telecomms/server,
 /area/ai_monitored/turret_protected/ai)
@@ -2405,7 +2410,8 @@
 	idDoor = "ai_core_airlock_interior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = 23;
-	pixel_y = -7
+	pixel_y = -7;
+	req_access_txt = "65"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -2415,6 +2421,12 @@
 	c_tag = "AI Chamber - Port";
 	dir = 4;
 	network = list("aicore")
+	},
+/obj/machinery/turretid{
+	icon_state = "control_stun";
+	name = "AI Chamber turret control";
+	pixel_y = 32;
+	req_access = list(65)
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
@@ -2428,7 +2440,8 @@
 /area/ai_monitored/turret_protected/aisat_interior)
 "XM" = (
 /obj/machinery/door/airlock/public{
-	id_tag = "ai_core_airlock_interior"
+	id_tag = "ai_core_airlock_interior";
+	req_access_txt = "65"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{

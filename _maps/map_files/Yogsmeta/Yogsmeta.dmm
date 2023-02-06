@@ -45421,7 +45421,8 @@
 	idDoor = "ai_core_airlock_interior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = 9;
-	pixel_y = -22
+	pixel_y = -22;
+	req_access_txt = "65"
 	},
 /turf/open/floor/plasteel/dark/telecomms,
 /area/ai_monitored/turret_protected/ai)
@@ -59114,14 +59115,16 @@
 	idDoor = "telecomms_airlock_exterior";
 	idSelf = "telecomms_airlock_control";
 	pixel_x = 22;
-	pixel_y = -25
+	pixel_y = -25;
+	req_access_txt = "61"
 	},
 /obj/machinery/doorButtons/airlock_controller{
 	idExterior = "telecomms_airlock_exterior";
 	idInterior = "telecomms_airlock_interior";
 	idSelf = "telecomms_airlock_control";
 	pixel_x = 31;
-	pixel_y = -23
+	pixel_y = -23;
+	req_access_txt = "61"
 	},
 /turf/open/floor/plasteel/grimy,
 /area/tcommsat/computer)
@@ -62044,7 +62047,8 @@
 	name = "AI Chamber entrance shutters"
 	},
 /obj/machinery/door/airlock/public{
-	id_tag = "ai_core_airlock_interior"
+	id_tag = "ai_core_airlock_interior";
+	req_access_txt = "65"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/dark/telecomms,
@@ -62374,7 +62378,8 @@
 	idDoor = "ai_core_airlock_exterior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = 10;
-	pixel_y = -22
+	pixel_y = -22;
+	req_access_txt = "65"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
@@ -63823,13 +63828,15 @@
 	idDoor = "telecomms_airlock_exterior";
 	idSelf = "telecomms_airlock_control";
 	pixel_x = 22;
-	pixel_y = 25
+	pixel_y = 25;
+	req_access_txt = "61"
 	},
 /obj/machinery/doorButtons/access_button{
 	idDoor = "telecomms_airlock_interior";
 	idSelf = "telecomms_airlock_control";
 	pixel_x = -22;
-	pixel_y = -25
+	pixel_y = -25;
+	req_access_txt = "61"
 	},
 /turf/open/floor/plasteel/dark,
 /area/tcommsat/computer)
@@ -65393,14 +65400,16 @@
 	idDoor = "ai_core_airlock_exterior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = 10;
-	pixel_y = 22
+	pixel_y = 22;
+	req_access_txt = "65"
 	},
 /obj/machinery/doorButtons/airlock_controller{
 	idExterior = "ai_core_airlock_exterior";
 	idInterior = "ai_core_airlock_interior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = 9;
-	pixel_y = 32
+	pixel_y = 32;
+	req_access_txt = "65"
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
@@ -73957,7 +73966,8 @@
 	idDoor = "ai_core_airlock_interior";
 	idSelf = "ai_core_airlock_control";
 	pixel_x = 9;
-	pixel_y = 25
+	pixel_y = 25;
+	req_access_txt = "65"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
@@ -76654,6 +76664,13 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 1
 	},
+/obj/machinery/turretid{
+	icon_state = "control_stun";
+	name = "AI Chamber turret control";
+	pixel_x = -2;
+	pixel_y = -25;
+	req_access = list(65)
+	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "uSB" = (
@@ -78571,7 +78588,8 @@
 	idDoor = "telecomms_airlock_interior";
 	idSelf = "telecomms_airlock_control";
 	pixel_x = -22;
-	pixel_y = 25
+	pixel_y = 25;
+	req_access_txt = "61"
 	},
 /turf/open/floor/plasteel/dark/telecomms,
 /area/tcommsat/server)
@@ -78812,7 +78830,8 @@
 	icon_state = "control_stun";
 	name = "AI Chamber turret control";
 	pixel_x = -2;
-	pixel_y = -25
+	pixel_y = -25;
+	req_access = list(65)
 	},
 /obj/machinery/flasher{
 	id = "AI";

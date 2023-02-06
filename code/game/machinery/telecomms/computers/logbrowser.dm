@@ -14,11 +14,23 @@
 
 	var/universal_translate = FALSE // set to TRUE if it can translate nonhuman speech
 
-	req_access = list(ACCESS_TCOMSAT)
+	req_access = list(ACCESS_TCOM_ADMIN)
 	circuit = /obj/item/circuitboard/computer/comm_server
 	tgui_id = "LogBrowser"
 
+
+/obj/machinery/computer/telecomms/server/emag_act(mob/user)
+	if(obj_flags & EMAGGED)
+		return
+	to_chat(user, span_warning("You bypass the access restrictions"))
+	obj_flags |= EMAGGED
+
 /obj/machinery/computer/telecomms/server/ui_interact(mob/user, datum/tgui/ui)
+	if(!check_access(user.get_idcard()) && !issilicon(user) && !isAI(user) && !(obj_flags & EMAGGED))
+		to_chat(usr, span_danger("Access denied"))
+		return
+	if(obj_flags & EMAGGED)
+		to_chat(usr, span_warning("Error in access control subsystem"))
 	ui = SStgui.try_update_ui(user,src,ui)
 	if(!ui)
 		ui = new(user,src,"LogBrowser")
@@ -87,6 +99,7 @@
 	
 /obj/machinery/computer/telecomms/server/ui_data(mob/user)
 	var/list/data = list()
+	data["authenticated"] = authenticated
 	data["screen_state"] = screen_state
 	data["network"] = network
 	if(screen_state == MONITOR_MAINMENU)
